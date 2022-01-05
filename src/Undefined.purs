@@ -1,3 +1,7 @@
-module Undefined where
+module Undefined (undefined) where
 
-foreign import undefined :: forall anything. anything
+
+foreign import undefinedImpl :: forall anything. anything
+
+undefined :: forall anything. anything
+undefined = undefinedImpl
